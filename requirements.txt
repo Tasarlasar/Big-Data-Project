@@ -1,0 +1,26 @@
+# Python dependencies for the Big Data E-commerce + Tokyo Railway project
+
+# Data handling
+pandas==2.2.2
+numpy==1.26.4
+
+# MongoDB driver
+pymongo==4.7.3
+
+# Visualisation / dashboard
+plotly==5.22.0
+dash==2.17.1
+dash-bootstrap-components==1.6.0
+
+# HTTP / download utilities
+requests==2.32.3
+tqdm==4.66.4
+
+# Kaggle dataset download
+kaggle==1.6.14
+
+# Jupyter (optional, for exploration)
+jupyterlab==4.2.3
+
+# Hive/Spark (for full pipeline on Windows)
+pyspark>=3.3.0

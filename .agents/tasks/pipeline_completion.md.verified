@@ -1,0 +1,135 @@
+# E-Commerce Pipeline Verification Report
+
+## Date: 2026-10-12
+
+---
+
+## Final Status of All 13 Queries
+
+| Query | File | Rows | Status |
+|-------|------|------|--------|
+| Q1 | q1_total_orders_revenue.csv | 1 (excl. header) | PASS |
+| Q2 | q2_revenue_by_category.csv | 15 (excl. header) | PASS |
+| Q3 | q3_top_products_revenue.csv | 50 (excl. header) | PASS |
+| Q4 | q4_payment_methods.csv | 5 (excl. header) | PASS |
+| Q5 | q5_customer_clv.csv | 50 (excl. header) | PASS |
+| Q6 | q6_reviews_by_category.csv | 71 (excl. header) | PASS |
+| Q7 | q7_high_sales_poor_rating.csv | 90 (excl. header) | PASS |
+| Q8 | q8_monthly_trend.csv | 25 (excl. header) | PASS |
+| Q9 | q9_delivery_vs_score.csv | 5 (excl. header) | PASS |
+| Q10 | q10_delivery_rate.csv | 2 (excl. header) | PASS |
+| Q11 | q11_seller_performance.csv | 20 (excl. header) | PASS |
+| Q12 | q12_review_distribution.csv | 5 (excl. header) | PASS |
+| Q13 | q13_state_heatmap.csv | 27 (excl. header) | PASS |
+
+---
+
+## First 3 Data Rows from Each File
+
+### Q1 - Total Orders & Revenue
+```
+total_orders,total_revenue,avg_order_value,unique_customers
+96477,15422461.77,153.07,96477
+```
+
+### Q2 - Revenue by Category (Top 15)
+```
+category,order_count,item_count,total_revenue,avg_price
+health_beauty,8836,9670,1258681.34,130.16
+watches_gifts,5624,5991,1205005.68,201.14
+```
+
+### Q3 - Top Products by Revenue (Top 50)
+```
+product_id,category_en,units_sold,total_revenue,avg_price
+bb50f2e236e5eea0100680137654686c,health_beauty,194,67258.03,327.63
+d1c427060a0f73f6b889a5c7c61f2ac4,computers_accessories,332,58957.31,137.41
+```
+
+### Q4 - Payment Methods
+```
+payment_type,count,order_count,total_value
+credit_card,76795,76505,12542084.19
+boleto,19784,19784,2869361.27
+```
+
+### Q5 - Customer Lifetime Value (Top 50)
+```
+customer_id,order_count,total_clv,avg_order_value
+1617b1357756262bfa56ab541c47bc16,1,13664.08,13664.08
+ec5b2ba62e574342386871631fafd3fc,1,7274.88,7274.88
+```
+
+### Q6 - Reviews by Category
+```
+category,avg_review_score,review_count
+cds_dvds_musicals,4.64,14
+fashion_childrens_clothes,4.5,8
+```
+
+### Q7 - High Sales but Poor Rating
+```
+product_id,units_sold,avg_review_score
+b5e13c9a353102f79c6206ff5cb61a50,91,2.89
+362b773250263786dd58670d2df42c3b,73,2.92
+```
+
+### Q8 - Monthly Trend
+```
+year_month,order_count,monthly_revenue
+2016-09,3,252.24
+2016-10,324,59090.48
+```
+
+### Q9 - Delivery Time vs Score
+```
+review_score,avg_delivery_days,order_count
+1.0,20.8,9409
+2.0,16.2,2941
+```
+
+### Q10 - Delivery Rate
+```
+on_time,order_count,avg_review_score
+late,10853,2.35
+on_time,89139,4.29
+```
+
+### Q11 - Seller Performance (Top 20)
+```
+seller_id,total_revenue,total_freight,order_count,avg_review_score
+4869f7a5dfa277a7dca6462dcf3b52b2,229472.63,20168.07,1132,4.12
+53243585a1d6dc2643021fd1853d8905,222776.05,13080.63,358,4.08
+```
+
+### Q12 - Review Distribution
+```
+review_score,review_count,order_count
+1,11424,11393
+2,3151,3148
+```
+
+### Q13 - State Heatmap
+```
+customer_state,order_count,total_revenue,avg_order_value
+SP,41746,5998226.96,137.5
+RJ,12852,2144379.69,158.53
+```
+
+---
+
+## Key Findings
+
+- **Total Orders**: 96,477 orders processed
+- **Total Revenue**: R$15,422,461.77
+- **Average Order Value**: R$153.07
+- **Top Revenue Category**: health_beauty (R$1,258,681.34)
+- **Payment Method**: credit_card dominates with 76,505 orders
+- **Delivery Performance**: 89,139 on-time (4.29 avg score) vs 10,853 late (2.35 avg score)
+- **State Leader**: SP (Sao Paulo) with R$5,998,226.96 revenue
+
+---
+
+## Overall Pipeline Status: **PASS**
+
+All 13 output CSV files exist and contain data. No missing or empty files.

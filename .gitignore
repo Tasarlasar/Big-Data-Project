@@ -1,0 +1,45 @@
+# Large data files - download via instructions in README
+staging/
+archive/*.csv
+archive/*.jsonl
+*.jsonl
+*.parquet
+
+# Logs
+*.log
+pig_*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Build / packaging
+.python-eggs/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Hadoop / Java runtime artifacts
+*.jar
+*.class
+
+# Temporary Hive / PIG output staging
+/tmp/
